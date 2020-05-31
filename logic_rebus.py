@@ -1,6 +1,6 @@
 from PyQt5 import QtWidgets, QtGui
 from init_rebus import Ui_rebus
-from PyQt5.QtCore import QRect, QTimer
+from PyQt5.QtCore import QTimer
 from resurse_lib import Resurse
 import subprocess as sub
 import os
