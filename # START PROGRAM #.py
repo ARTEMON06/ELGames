@@ -1,4 +1,5 @@
 # START PROGRAM #
+# This program start with logic_Menu
 import subprocess as sub
 from resurse_lib import Resurse
 import datetime
