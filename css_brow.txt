@@ -1,0 +1,60 @@
+QWidget {
+font: 63 italic 13pt "IBM Plex Sans SemiBold";
+color: #4D2600;
+background-color: #B27936
+}
+
+QPushButton {
+background-color:#A65200;
+width: 70px;
+height: 50px;
+border-right: 3px outset #743A01;
+border-bottom: 3px outset #743A01;
+border-radius: 5px;}
+
+QPushButton:pressed {
+border: none;
+border-left: 3px outset #4D2600;
+border-top: 3px outset #4D2600;
+}
+
+QLabel{
+background-color:#A65200;
+border-right: 3px outset #743A01;
+border-bottom: 3px outset #743A01;
+border-radius: 5px;}
+
+QLineEdit{
+background-color:#A65200;
+border-right: 3px outset #743A01;
+border-bottom: 3px outset #743A01;
+border-radius: 5px;}
+
+QCheckBox{
+background-color:#A65200;
+border-right: 3px outset #743A01;
+border-bottom: 3px outset #743A01;
+border-radius: 5px;}
+
+QScrollBar{
+background-color:#A65200;
+border-right: 3px outset #743A01;
+border-bottom: 3px outset #743A01;
+border-radius: 5px;}
+
+
+QComboBox QAbstractItemView {
+  border: none;
+  background-color: #A65200;
+  selection-background-color: #743A01;
+  outline: 0px;
+ }
+
+QComboBox {
+  selection-background-color: #743A01;
+  background-color: #A65200;
+  border-right: 3px outset #743A01;
+  border-bottom: 3px outset #743A01;
+  border-radius: 5px;
+}
+

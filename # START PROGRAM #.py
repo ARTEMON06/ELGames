@@ -3,7 +3,6 @@ import subprocess as sub
 from resurse_lib import Resurse
 import datetime
 import os
-# This program start when started logic_Menu.py or logic_Menu.exe
 
 now = datetime.datetime.now()
 

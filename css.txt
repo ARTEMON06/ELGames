@@ -1,0 +1,61 @@
+
+QWidget {
+font: 63 italic 13pt "IBM Plex Sans SemiBold";
+background-color:qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0.05 rgba(14, 8, 73, 255), stop:0.255682 rgba(55, 74, 115, 255), stop:0.471591 rgba(56, 77, 118, 255), stop:0.664773 rgba(86, 118, 181, 255), stop:0.880682 rgba(103, 138, 214, 255));
+color: rgb(7, 17, 104)}
+
+QPushButton {
+background-color:rgb(103, 138, 214);
+width: 70px;
+height: 50px;
+}
+
+QPushButton:hover {
+background-color:rgb(88, 118, 182);}
+
+QPushButton:pressed {
+background-color:rgb(46, 62, 97);}
+
+QLabel{
+background-color:rgb(103, 138, 214);
+border: none;
+}
+
+QLineEdit{
+background-color:rgb(103, 138, 214);
+border: none;
+}
+
+QCheckBox{
+background-color:rgb(103, 138, 214);
+border: none;
+}
+
+QSlider{
+background-color:rgb(103, 138, 214);
+border: none;
+}
+
+QToolTip { 
+background-color: rgb(40, 81, 122); 
+color: black; 
+border: none;
+}
+
+QSpinBox{
+background-color:rgb(103, 138, 214);
+border: none;
+}
+
+QComboBox QAbstractItemView {
+  border: none;
+  background-color: rgb(88, 118, 182);
+  selection-background-color: rgb(46, 62, 97);
+  outline: 0px;
+ }
+
+QComboBox {
+  selection-background-color: rgb(88, 118, 182);
+  background-color: rgb(103, 138, 214);
+  border: none;
+}

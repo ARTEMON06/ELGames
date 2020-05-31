@@ -1,0 +1,61 @@
+QWidget {
+font: 63 italic 13pt "IBM Plex Sans SemiBold";
+color: rgb(255, 255, 255);
+background-color: rgb(35, 35, 35);
+}
+
+QPushButton {
+background-color: rgb(53, 53, 53);
+width: 70px;
+height: 50px;
+border-right: 5px ridge rgb(0, 0, 111);
+border-bottom: 5px ridge rgb(0, 0, 111);
+border-radius: 5px;}
+
+QPushButton:pressed {
+color: rgb(0, 0, 111);
+border-left: 5px ridge rgb(30, 30, 30);
+border-top: 5px ridge rgb(30, 30, 30);
+border-right: none;
+border-bottom: none;
+}
+
+QLabel{
+border-right: 5px ridge rgb(0, 0, 111);
+border-bottom: 5px ridge rgb(0, 0, 111);
+background-color:rgb(53, 53, 53);
+border-radius: 5px;}
+
+QLineEdit{
+border-right: 5px ridge rgb(0, 0, 111);
+border-bottom: 5px ridge rgb(0, 0, 111);
+background-color:rgb(53, 53, 53);
+border-radius: 5px;}
+
+QCheckBox{
+border-right: 5px ridge rgb(0, 0, 111);
+border-bottom: 5px ridge rgb(0, 0, 111);
+background-color:rgb(53, 53, 53);
+border-radius: 5px;}
+
+QScrollBar{
+border-right: 5px ridge rgb(0, 0, 111);
+border-bottom: 5px ridge rgb(0, 0, 111);
+background-color:rgb(53, 53, 53);
+border-radius: 5px;}
+
+
+QComboBox QAbstractItemView {
+  border: none;
+  background-color: rgb(53, 53, 53);
+  selection-background-color: rgb(35, 35, 35);
+  outline: 0px;
+ }
+
+QComboBox {
+  border-right: 5px ridge rgb(0, 0, 111);
+  selection-background-color: rgb(53, 53, 53);
+  border-bottom: 5px ridge rgb(0, 0, 111);
+  background-color:rgb(53, 53, 53);
+  border-radius: 5px;;
+}
