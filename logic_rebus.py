@@ -6,7 +6,6 @@ import subprocess as sub
 import os
 import sys
 
-
 class rebus(QtWidgets.QMainWindow):
 
     def __init__(self):
