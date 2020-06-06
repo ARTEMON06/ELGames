@@ -38,6 +38,7 @@ class mywindow(QtWidgets.QMainWindow):
 		self.ui.checkBox.setToolTip("Поставь здесь галочку, если ты умеешь <b>делить и умножать!</b>")
 		self.ui.svaip.setToolTip("Нажимая на эту кнопку, ты обнуляешь все свои <b>достижения и баллы!</b>")
 		self.ui.control.setToolTip("Настройка <b>родительского контроля!</b>")
+		self.ui.comboBox.setToolTip("<b>Выбери тему<b>, которая нравится!")
 
 	def theme(self, text): 
 		if text == 1:
