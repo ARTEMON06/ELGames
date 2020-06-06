@@ -27,8 +27,6 @@ while True:
 	if hour_over > 24:
 		hour_over = 0
 
-	print(f"{str(hour_over)}   {str(minutes_over)}      {now.hour}  {now.minute}")
-
 	if hour_over == int(now.hour) and minutes_over == int(now.minute):
 		break
 

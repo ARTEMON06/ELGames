@@ -13,7 +13,12 @@ class Menu(QtWidgets.QWidget):
         self.ui.pushButton.clicked.connect(self.option)
         self.ui.reb.clicked.connect(self.reb)
         self.ui.ex.clicked.connect(self.exercises)
+        self.ui.games.clicked.connect(self.game)
         self.heart()
+
+    def game(self):
+        sub.Popen(["python.exe", "logic_tasks.py"])
+        sys.exit()
 
     def reb(self):
         sub.Popen(["python.exe", "logic_Menu_rebus.py"])

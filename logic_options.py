@@ -111,7 +111,6 @@ class mywindow(QtWidgets.QMainWindow):
 		Переменная self.maxnum = slider.
 		Значения от 2 до 100.
 		"""
-		#print(value)
 		self.maxnum = value
 		self.ui.label.setText(f"  Выбери до скольки ты умеешь считать: {self.maxnum}")
 		self.resurse_init()

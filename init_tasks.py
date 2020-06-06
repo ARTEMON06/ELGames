@@ -118,7 +118,7 @@ class Ui_tasks(object):
         self.home.setText(_translate("task", "назад"))
         self.ask.setText(_translate("task", "ОТВЕТИТЬ!"))
         self.lol.setText(_translate("task", "Показать ответ"))
-        self.label.setText(_translate("task", "↓ Напиши слово ↓"))
+        self.label.setText(_translate("task", "↓ Напиши ответ ↓"))
         self.svaip.setText(_translate("task", "Пропустить"))
 
 

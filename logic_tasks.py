@@ -53,14 +53,13 @@ class tasks(QtWidgets.QMainWindow):
 		self.ui.otvet.clear()
 
 	def task(self):
-    	print("help")
 		self.col1 = "0"
 		self.col2 = "0"
 		self.col3 = "0"
 		self.ui.task.clear()
 		level = int(Resurse("leveltask").read())
 
-		def item(s, *index):
+		def item(*index):
 			index = rand.choice(index)
 
 			if index == "food":
@@ -80,11 +79,12 @@ class tasks(QtWidgets.QMainWindow):
 				self.ob3 = ["монета", "карточка", "карандаш", "ручка", "ластик",
 					   "листочек", "гайка", "болтик", "пуговица", "журнал", "газета", "книга"]
 
-				while True:
-					self.poz = rand.randint(0, len(self.ob1) - 1)
-					if self.ob1[self.poz] != self.last_ob:
-						self.last_ob = self.poz
-						break		
+			while True:
+				g = rand.randint(0, len(self.ob1) - 1)
+				if self.ob1[g] != self.last_ob:
+					self.last_ob = g
+					self.poz = g
+					break	
 
 		def chelik():
 			mans = ["Вася", "Роман", "Олег", "Виктор", "Дядя Петя", "Фёдор Семёнович",
@@ -103,14 +103,19 @@ class tasks(QtWidgets.QMainWindow):
 			self.gen2 = 0 if self.chel2[-1] == "а" else 1
  
 		def ret(num):
+			
 			if int(str(num)[-1]) < 5 and int(str(num)[-1]) != 0:
 				if num > 20:
 					if int(str(num)[-1]) == 1:
 						v = self.ob3[self.poz]
 					else:
 						v = self.ob1[self.poz]
-				else:
+				elif num > 4:
 					v = self.ob2[self.poz]
+				elif num != 1:
+					v = self.ob1[self.poz]
+				else:
+					v = self.ob3[self.poz]
 			else:
 				v = self.ob2[self.poz]
 			return v
@@ -131,13 +136,13 @@ class tasks(QtWidgets.QMainWindow):
 						self.rez = self.num + self.num2
 						break
 				if sign == "-":
-					if self.num - self.num2 > 0:
+					if self.num - self.num2 > -1:
 						self.rez = self.num - self.num2
 						break
-
+			item("small", "food")
+			in1()
 			if sign == "+":
-				item(1, "small", "food")
-				in1()
+				
 				if rand.randint(0, 1) == 1:
 					dei1 = "купил" if self.gen else "купила"
 					dei2 = "него" if self.gen else "неё"
@@ -149,19 +154,18 @@ class tasks(QtWidgets.QMainWindow):
 
 					self.ui.task.setText(f"{self.chel} {dei1} {self.num} {self.col1}, а {dei2} друг принёс ещё {self.num2} {self.col2}.\nСколько всего {self.col3} они принесли?")
 			if sign == "-":
-				item(1, "small", "food")
-				in1()
 				if rand.randint(0, 1) == 1:
 					dei1 = "он" if self.gen else "она"
 					dei2 = "отдал" if self.gen else "отдала"
-					self.ui.task.setText(f"У {self.chel} есть {self.num} {self.col1}, {self.num2} {self.col2} {dei1} {dei2} другу. Сколько теперь {self.col3} у {self.chel2}?")
+					self.ui.task.setText(f"У {self.chel2} есть {self.num} {self.col1}, {self.num2} {self.col2} {dei1} {dei2} другу. Сколько теперь {self.col3} у {self.chel2}?")
 				else:
 					item(1, "food")
 					in1()
 					dei1 = "купил" if self.gen else "купила"
 					dei2 = "он" if self.gen else "она"
 					dei3 = "съел" if self.gen else "съела"
-					self.ui.task.setText(f"{self.chel} {dei1} в магазине {self.num} {self.col1}, {self.num2} {self.col2} {dei2} {dei3}. Сколько теперь у него {self.col3}")
+					dei4 = "него" if self.gen else "неё"
+					self.ui.task.setText(f"{self.chel} {dei1} в магазине {self.num} {self.col1}, {self.num2} {self.col2} {dei2} {dei3}. Сколько теперь у {dei4} {self.col3}")
 
 		def two():
 			var = rand.randint(1, 8)
@@ -212,7 +216,6 @@ class tasks(QtWidgets.QMainWindow):
 				two()
 			if n == 2:
 				three()
-		print(self.s)
 
 	def rezult_color(self, color):
 		if color == 0:
