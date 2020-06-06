@@ -14,12 +14,11 @@ class check(QtWidgets.QMainWindow):
 		self.ui.no.clicked.connect(self.no)
 
 	def yes(self):
-		Resurse("обнулить").write(1)
+		Resurse("баллы").write(0)
 		sub.Popen(["python.exe", "logic_options.py"])
 		sys.exit()
 
 	def no(self):
-		Resurse("обнулить").write(0)
 		sub.Popen(["python.exe", "logic_options.py"])
 		sys.exit()
 

@@ -31,8 +31,8 @@ class mywindow(QtWidgets.QMainWindow):
 			self.ui.comboBox.setCurrentIndex(3)
 		if Resurse("theme").read() == "css_style.txt":
 			self.ui.comboBox.setCurrentIndex(4)
-		if Resurse("обнулить").read() == "1":
-			self.obnul()
+		# if Resurse("обнулить").read() == "1":
+		# 	self.obnul()
 
 		self.ui.svaip_2.setToolTip("Нажимая на эту кнопку, ты можешь посмотреть все свои <b>достижения!</b>")
 		self.ui.checkBox.setToolTip("Поставь здесь галочку, если ты умеешь <b>делить и умножать!</b>")
@@ -90,10 +90,10 @@ class mywindow(QtWidgets.QMainWindow):
 			sub.Popen(["python.exe", "logic_control_pass_take.py"])
 			sys.exit()
 
-	def obnul(self):
-		Resurse("баллы").write(0)
-		self.ui.bals.setText(str(Resurse("баллы").read()))
-		Resurse("обнулить").write(0)
+	# def obnul(self):
+    # 		Resurse("баллы").write(0)
+	# 	self.ui.bals.setText(str(Resurse("баллы").read()))
+	# 	Resurse("обнулить").write(0)
 
 	def svaip(self):
 		sub.Popen(["python.exe", "logic_check.py"])
