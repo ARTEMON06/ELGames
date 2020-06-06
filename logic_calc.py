@@ -7,7 +7,7 @@ import sys
 import random as r
 import time 
 
-
+# this good code
 class mywindow(QtWidgets.QMainWindow):
     """Класс запускающий окно с примерами."""
     def __init__(self):
