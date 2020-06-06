@@ -1,7 +1,2 @@
-import random
-
-
-def p(*k):
-    print(random.choice(k))
-
-p(123)
+with open("resurse_mystery.txt", "r", encoding="utf-8") as f:
+    print(f.readlines())

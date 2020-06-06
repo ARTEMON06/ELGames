@@ -24,6 +24,7 @@ class Resurse():
 	def __init__(self, name, file = "resurse", max_name = 40):
 		
 		self.max_name = max_name
+		name = str(name)
 		self.name = name + "-"*(self.max_name - len(name))
 		self.file = file + ".txt"
 		file = open(self.file, "a", encoding="utf-8")
