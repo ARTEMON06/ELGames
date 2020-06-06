@@ -16,6 +16,8 @@ class control(QtWidgets.QMainWindow):
 		self.ui.min.setMaximum(59)
 		self.ui.min.valueChanged.connect(self.min)
 		self.ui.hour.valueChanged.connect(self.hour)
+		self.ui.hour.setToolTip("Заданные настройки заработают при следующем включении!")
+		self.ui.min.setToolTip("Заданные настройки заработают при следующем включении!")
 		self.resTime()
 
 	def resTime(self):

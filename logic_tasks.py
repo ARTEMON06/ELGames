@@ -159,7 +159,7 @@ class tasks(QtWidgets.QMainWindow):
 					dei2 = "отдал" if self.gen else "отдала"
 					self.ui.task.setText(f"У {self.chel2} есть {self.num} {self.col1}, {self.num2} {self.col2} {dei1} {dei2} другу. Сколько теперь {self.col3} у {self.chel2}?")
 				else:
-					item(1, "food")
+					item("food")
 					in1()
 					dei1 = "купил" if self.gen else "купила"
 					dei2 = "он" if self.gen else "она"
