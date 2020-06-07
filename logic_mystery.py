@@ -65,10 +65,10 @@ class mystery(QtWidgets.QMainWindow):
     def reb(self):
         self.num = Resurse("mystery").read()
         self.num = int(self.num) + 1
-        Resurse("mystery").write(self.num)
         self.ui.otvet.clear()
-        if self.num == "28":
+        if int(self.num) > 27:
             self.num = "0"
+        Resurse("mystery").write(self.num)
         with open("resurse_mystery.txt", "r", encoding="utf-8") as file:
             text = file.readlines()[int(self.num)]
             self.ui.reb.setText(text)
@@ -78,7 +78,7 @@ class mystery(QtWidgets.QMainWindow):
         
 
     def home(self):
-        sub.Popen(["python.exe", "logic_Menu_mystery.py"])
+        sub.Popen(["python.exe", "logic_Menu_rebus.py"])
         sys.exit()
 
     def heart(self):
