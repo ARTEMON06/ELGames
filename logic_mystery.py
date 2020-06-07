@@ -27,8 +27,6 @@ class mystery(QtWidgets.QMainWindow):
         self.ui.otvet.setText(self.rez)
         self.lolch = False
 
-    #TODO: this code need for fast fixid a very bad bug, you mast check self.rez, why it has type - str with \n, it most not be, what a fuk man!?
-
     def proverka(self):
         
         text = self.ui.otvet.text().lower()
