@@ -12,7 +12,12 @@ class Menu_rebus(QtWidgets.QMainWindow):
 		self.ui.pushButton.clicked.connect(self.option)
 		self.ui.home.clicked.connect(self.home)
 		self.ui.rebus.clicked.connect(self.reb)
+		self.ui.zadacha.clicked.connect(self.zad)
 		self.heart()
+
+	def zad(self):
+		sub.Popen(["python.exe", "logic_mystery.py"])
+		sys.exit()
 
 	def reb(self):
 		sub.Popen(["python.exe", "logic_rebus.py"])
