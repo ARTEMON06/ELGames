@@ -18,37 +18,34 @@ class mystery(QtWidgets.QMainWindow):
         self.ui.home.clicked.connect(self.home)
         self.ui.svaip.clicked.connect(self.reb)
         self.ui.lol.clicked.connect(self.lol)
-        self.ui.otvet.returnPressed.connect(self.proverka)
         self.ui.otvet.setFocus()
         self.lolch = True
         self.reb()
         self.heart()
 
     def lol(self):
-        self.rez = Resurse(self.num, "keys_mystery").read()
         self.ui.otvet.setText(self.rez)
         self.lolch = False
 
     #TODO: this code need for fast fixid a very bad bug, you mast check self.rez, why it has type - str with \n, it most not be, what a fuk man!?
 
     def proverka(self):
-        self.rez = Resurse(self.num, "keys_mystery").read()
-        print(self.rez)
+        
         text = self.ui.otvet.text().lower()
-        if self.rez == text:
+        if self.rez != text:
+            self.rezult_color(1)
+            QTimer.singleShot(1000, lambda: self.rezult_color(2))
+            
+        else:
             if self.lolch:
-                Resurse("баллы").write(str(int(self.bal) + 1))
+                Resurse("баллы").write(str(int(self.bal) + 1))     
             else:
-                self.lolch = True
+                self.lolch = True      
             self.rezult_color(0)
             QTimer.singleShot(1000, lambda: self.rezult_color(2))
             self.heart()
             self.reb()
-            self.num = int(self.num) + 1
-            Resurse("mystery").write(self.num)
-        else:
-            self.rezult_color(1)
-            QTimer.singleShot(1000, lambda: self.rezult_color(2))
+        
         self.ui.otvet.clear()
 
     def rezult_color(self, color):
@@ -69,13 +66,18 @@ class mystery(QtWidgets.QMainWindow):
             self.ui.red1.setVisible(0)
 
     def reb(self):
-        self.ui.otvet.clear()
         self.num = Resurse("mystery").read()
+        self.num = int(self.num) + 1
+        Resurse("mystery").write(self.num)
+        self.ui.otvet.clear()
         if self.num == "28":
             self.num = "0"
         with open("resurse_mystery.txt", "r", encoding="utf-8") as file:
             text = file.readlines()[int(self.num)]
             self.ui.reb.setText(text)
+        with open("keys_mystery.txt", "r", encoding = "utf-8") as file:
+            self.rez = file.readlines()[int(self.num)]
+        self.rez = self.rez[:-1]
         
 
     def home(self):
