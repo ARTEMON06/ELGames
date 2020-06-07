@@ -28,7 +28,6 @@ class mystery(QtWidgets.QMainWindow):
         self.lolch = False
 
     def proverka(self):
-        
         text = self.ui.otvet.text().lower()
         if self.rez != text:
             self.rezult_color(1)
