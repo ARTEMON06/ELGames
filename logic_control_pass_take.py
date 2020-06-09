@@ -25,18 +25,8 @@ class control_pass_take(QtWidgets.QMainWindow):
 	def go(self):
 		text = self.ui.porol.text()
 
-		if text.find(" ") != -1:
-			self.ui.error.setText("Пароль не должен содержать пробелы!")
-			self.ui.error.setVisible(True)
-			self.error()
-
 		elif len(text)==0:
 			self.ui.error.setText("Это поле не должно быть пустым!")
-			self.ui.error.setVisible(True)
-			self.error()
-
-		elif len(text)<3:
-			self.ui.error.setText("Пароль должен содержать минимум 4 символа!")
 			self.ui.error.setVisible(True)
 			self.error()
 
