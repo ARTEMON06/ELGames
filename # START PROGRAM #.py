@@ -10,6 +10,8 @@ now = datetime.datetime.now()
 now_hour = int(now.hour)
 now_minutes = int(now.minute)
 
+    
+
 minutes = Resurse("min").read()
 hour = Resurse("hour").read()
 
@@ -30,5 +32,8 @@ while True:
 
 	if hour_over == int(v.hour) and minutes_over == int(v.minute):
 		break
+
+Resurse("realmin").write(v.minute)
+Resurse("realhour").write(v.hour)
 
 os.system("TASKKILL /F /FI \"WINDOWTITLE eq Form*\"")
