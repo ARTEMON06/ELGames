@@ -8,6 +8,7 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5.QtCore import QRect, QTimer
 from resurse_lib import Resurse
 import sys
 
@@ -21,7 +22,7 @@ class Ui_end(object):
 		self.textBrowser = QtWidgets.QTextBrowser(end)
 		self.textBrowser.setGeometry(QtCore.QRect(10, 10, 381, 201))
 		self.textBrowser.setObjectName("textBrowser")
-		with open("text_control", "r") as file:
+		with open("text_control.txt", "r", encoding = "utf-8") as file:
 			self.textBrowser.setText(file.read())
 		self.retranslateUi(end)
 		QtCore.QMetaObject.connectSlotsByName(end)

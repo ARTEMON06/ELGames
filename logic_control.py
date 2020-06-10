@@ -29,6 +29,10 @@ class control(QtWidgets.QMainWindow):
 		with open("text_control.txt", "r", encoding = "utf-8") as file:
 			self.ui.textEdit.setText(file.read())
 		self.resTime()
+		self.hours = Resurse("hour").read()
+		self.hours_2 = Resurse("hour_2").read()
+		self.minutes = Resurse("min").read()
+		self.minutes_2 = Resurse("min_2").read()
 
 	def resTime(self):
 		self.ui.min.setValue(int(Resurse("min").read()))

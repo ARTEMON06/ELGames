@@ -37,7 +37,7 @@ class Menu(QtWidgets.QWidget):
     def heart(self):
         self.ui.bals.setText(str(Resurse("баллы").read()))
 
-# s = sub.Popen(["python.exe", "# START PROGRAM #.py"])
+s = sub.Popen(["python.exe", "# START PROGRAM #.py"])
 
 app = QtWidgets.QApplication([])
 application = Menu()
