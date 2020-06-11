@@ -25,7 +25,7 @@ class control_pass_take(QtWidgets.QMainWindow):
 	def go(self):
 		text = self.ui.porol.text()
 
-		elif len(text)==0:
+		if len(text)==0:
 			self.ui.error.setText("Это поле не должно быть пустым!")
 			self.ui.error.setVisible(True)
 			self.error()
