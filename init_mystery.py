@@ -8,6 +8,7 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+from resurse_lib import Resurse
 
 
 class Ui_mystery(object):
@@ -20,28 +21,29 @@ class Ui_mystery(object):
 		self.bals = QtWidgets.QLabel(mystery)
 		self.bals.setGeometry(QtCore.QRect(530, 50, 121, 31))
 		self.bals.setStyleSheet("font: 75 14pt \"Verdana\";\n"
-"background-color: none")
-		self.bals.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
+								"background-color: none;\nborder: none;")
+		self.bals.setAlignment(QtCore.Qt.AlignLeading |
+							   QtCore.Qt.AlignLeft | QtCore.Qt.AlignVCenter)
 		self.bals.setObjectName("bals")
 		self.heart = QtWidgets.QLabel(mystery)
 		self.heart.setGeometry(QtCore.QRect(490, 50, 31, 31))
-		self.heart.setStyleSheet("background-color: none")
+		self.heart.setStyleSheet("background-color: none;\nborder: none;")
 		self.heart.setText("")
-		self.heart.setPixmap(QtGui.QPixmap("C:/Users/Artem/Desktop/АРТЕМ/ELGames\\Ресурс/Serdtse-s-chernoj-okantovkoj-narisovannoe.png"))
+		self.heart.setPixmap(QtGui.QPixmap(Resurse("heart").read()))
 		self.heart.setScaledContents(True)
 		self.heart.setObjectName("heart")
 		self.icon_2 = QtWidgets.QLabel(mystery)
 		self.icon_2.setGeometry(QtCore.QRect(10, 10, 61, 61))
-		self.icon_2.setStyleSheet("background-color: none")
+		self.icon_2.setStyleSheet("background-color: none;\nborder: none;")
 		self.icon_2.setText("")
-		self.icon_2.setPixmap(QtGui.QPixmap("C:/Users/Artem/Desktop/АРТЕМ/ELGames\\Ресурс/opt_ic.png"))
+		self.icon_2.setPixmap(QtGui.QPixmap(Resurse("option").read()))
 		self.icon_2.setScaledContents(True)
 		self.icon_2.setWordWrap(False)
 		self.icon_2.setOpenExternalLinks(False)
 		self.icon_2.setObjectName("icon_2")
 		self.pushButton = QtWidgets.QPushButton(mystery)
 		self.pushButton.setGeometry(QtCore.QRect(10, 10, 61, 61))
-		self.pushButton.setStyleSheet("background-color: none")
+		self.pushButton.setStyleSheet("background-color: none;\nborder: none")
 		self.pushButton.setText("")
 		self.pushButton.setObjectName("pushButton")
 		self.home = QtWidgets.QPushButton(mystery)
